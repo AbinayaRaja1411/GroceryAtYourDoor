@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="container">
+    <div class="row" style="background-color:limegreen">
+        <div class="col-6 offset-6">
+            @{
+                await Html.RenderPartialAsync("_Login");
+            }
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg">
+            @{
+                await Html.RenderPartialAsync("_Highlights");
+            }
+        </div>
+        <div class="col-lg" style="background-color:#dafec1">
+            @{
+                await Html.RenderPartialAsync("_Register");
+            }
+        </div>
+    </div>
+</div>
+@section Scripts
+    {
+    <script src="~/js/home-index.js"></script>
+}
